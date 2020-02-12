@@ -1,3 +1,6 @@
+using UnityEngine;
+using System.Collections.Generic;
+
 public static class Detect {
         public static List<GameObject> DetectToList(GameObject origin, float radius) {
             List<GameObject> result = new List<GameObject>();
