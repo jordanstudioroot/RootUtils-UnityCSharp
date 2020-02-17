@@ -19,5 +19,5 @@ All functions are static, and can be called directly from their corresponding cl
 # Recommendations
 
 # TODO
-- [ ] Add namespaces.
+- [x] Add namespaces.
 - [ ] Tests
