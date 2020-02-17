@@ -1,6 +1,6 @@
 # RootUtils
 
-A library of functions used by Studio Root Games in various projects. Includes various functions that could not otherwise be implemented as extensions on existing Unity classes. Can be directly copied into a project, turned into a Unity Package Manager Package, or imported into the project directly using [UnityNPMInit](https://github.com/jordanstudioroot/UnityNPMInit).
+A library of functions used by Studio Root Games in various projects. Includes various functions that could not otherwise be implemented as extensions on existing Unity classes. Can be directly copied into a project, turned into a Unity Package Manager Package, or imported into the project directly using `npm install jordanstudioroot/RootExtensions-UnityCSharp`. Library will be copied to `Assets/pkg-all/rootextensions-unitycsharp`.
 
 # Requirements
 
