@@ -1,10 +1,18 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public static class Detect {
-        public static List<GameObject> DetectToList(GameObject origin, float radius) {
+namespace RootUtils {
+    public static class Detect {
+        public static List<GameObject> DetectToList(
+            GameObject origin,
+            float radius
+        ) {
             List<GameObject> result = new List<GameObject>();
-            Collider[] detected = Physics.OverlapSphere(origin.transform.position, radius);
+            
+            Collider[] detected = Physics.OverlapSphere(
+                origin.transform.position,
+                radius
+            );
 
             foreach (Collider col in detected) {
                 if (col.gameObject != origin) {
@@ -15,11 +23,17 @@ public static class Detect {
             return result;
         }
 
-        public static GameObject[] DetectToArray(GameObject origin, float radius) {
+        public static GameObject[] DetectToArray(
+            GameObject origin,
+            float radius
+        ) {
             return DetectToList(origin, radius).ToArray();
         }
 
-        public static T DetectClosestWithComponent<T>(GameObject origin, float radius) where T : Component {
+        public static T DetectClosestWithComponent<T>(
+            GameObject origin,
+            float radius
+        ) where T : Component {
             List<GameObject> detectedObjs = DetectToList(origin, radius);
             Distance.SortObjectsByDistance(origin, detectedObjs);
 
@@ -34,7 +48,10 @@ public static class Detect {
             return null;
         }
 
-        public static List<T> DetectAllWithComponent<T>(GameObject origin, float radius) where T : Component {
+        public static List<T> DetectAllWithComponent<T>(
+            GameObject origin,
+            float radius
+        ) where T : Component {
             List<GameObject> detectedObjs = DetectToList(origin, radius);
             Distance.SortObjectsByDistance(origin, detectedObjs);
             List<T> result = new List<T>();
@@ -49,4 +66,5 @@ public static class Detect {
 
             return result;
         }
-    }   
+    }
+}   
