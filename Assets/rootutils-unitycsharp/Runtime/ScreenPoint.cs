@@ -4,13 +4,13 @@ namespace RootUtils {
     public static class ScreenPoint {
         public static bool IsOnScreen(Vector2 screenPoint) {
             bool nOverflow =
-                NorthOverflow() > 0 ? true : false;
+                NorthOverflow(screenPoint) > 0 ? true : false;
             bool eOverflow =
-                EastOverflow() > 0 ? true : false;
+                EastOverflow(screenPoint) > 0 ? true : false;
             bool sOverflow =
-                SouthOverflow() > 0 ? true : false;
+                SouthOverflow(screenPoint) > 0 ? true : false;
             bool wOverflow =
-                WestOverflow() > 0 ? true : false;
+                WestOverflow(screenPoint) > 0 ? true : false;
 
             if (nOverflow || eOverflow || sOverflow || wOverflow) {
                 return false;
