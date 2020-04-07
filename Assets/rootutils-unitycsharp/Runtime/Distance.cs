@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace RootUtils {
+namespace RootUtils.AI {
     public static class Distance {
         public static GameObject Closest(
             GameObject source,

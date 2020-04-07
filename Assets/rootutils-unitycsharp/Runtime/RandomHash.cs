@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Hashing {
+namespace RootUtils.Randomization {
     /// <summary>
     /// A serializeable hash value for storing persistent
     /// random values.

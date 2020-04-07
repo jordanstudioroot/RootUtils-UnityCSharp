@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace RootUtils {
+namespace RootUtils.Math {
     public class Bezier {
         public static Vector3 GetQuadradicPoint(Vector3 a, Vector3 b, Vector3 c, float t)
         {

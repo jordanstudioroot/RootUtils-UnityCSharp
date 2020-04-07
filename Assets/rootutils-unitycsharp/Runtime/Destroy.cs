@@ -1,9 +1,11 @@
 using UnityEngine;
 
-public static class Destroy {
+namespace RootUtils.UnityLifecycle {
+    public static class Destroy {
     public static void DestroyAll<T>() where T : UnityEngine.MonoBehaviour {
-        foreach(T t in GameObject.FindObjectsOfType<T>()) {
-            GameObject.Destroy(t.transform.gameObject);
+            foreach(T t in GameObject.FindObjectsOfType<T>()) {
+                GameObject.Destroy(t.transform.gameObject);
+            }
         }
     }
 }

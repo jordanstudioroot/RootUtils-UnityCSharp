@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-namespace RootUtils {
+namespace RootUtils.AI {
     public static class Detect {
         public static List<GameObject> DetectToList(
             GameObject origin,
