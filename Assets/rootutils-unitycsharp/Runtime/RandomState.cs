@@ -1,6 +1,6 @@
 using UnityEngine;
-
-public static class RandomState {
+namespace RootUtils.Randomization {
+    public static class RandomState {
 /// <summary>
 ///     Initialze the Unity random number generator with a new seed, and
 ///     return its previous state.
@@ -12,9 +12,10 @@ public static class RandomState {
 ///     The state of the Unity random number generator before it was initialized
 ///     with the seed value.
 /// </returns>    
-    public static Random.State Snapshot(int seed) {
-        Random.State result = Random.state;
-        Random.InitState(seed);
-        return result;
+        public static Random.State Snapshot(int seed) {
+            Random.State result = Random.state;
+            Random.InitState(seed);
+            return result;
+        }
     }
 }
